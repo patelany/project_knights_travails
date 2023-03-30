@@ -10,11 +10,13 @@
 
   button {
     position: relative;
+    margin: 15px;
+    margin-top: 30px;
     padding: 16px 30px;
     font-size: 1.5 rem;
     font-weight: 100;
     color: var(--color);
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.5); 
     border-radius: 4px;
     text-shadow: 0 0 15px var(--color);
     text-decoration: none;
@@ -33,7 +35,8 @@
 .board {
     width: 500px;
     height: 500px;
-    margin-top: 40px;
+    margin-left: -400px;
+    margin-top: -200px;
 }
 
 .square {
@@ -78,11 +81,40 @@ h1 {
 
 .purples {
     font-palette: --Purples;
-  }
+    margin-top: 70px;
+  } 
 
 
 img {
     height: 58px; 
     width: 58px;
+}
+
+.x {
+  color: purple;
+}
+
+.startInput {
+  margin-left: 600px;
+  margin-top: 100px;
+  width: 275px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.endInput {
+  margin-left: 600px;
+  margin-top: 100px;
+  width: 275px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#userInput {
+  color: #fff;
+  border: 2px solid white;
+  font-size: 20px;
 }
 

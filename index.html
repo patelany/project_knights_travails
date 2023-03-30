@@ -11,8 +11,19 @@
     <body>
         <h1 class="purples">Knights Travails</h1>
         <div class="container">
-            <button type="submit" class="start-game-button">Start Game</button>
-            <button type="submit" class="clear-board-button">Clear Board</button></div>
+            <button type="submit" id="startBtn" class="start-game-button">Start Game</button>
+            <button type="submit" id="clearBtn" class="clear-board-button">Clear Board</button>
+        </div>
+        <div class="input">
+            <div class="startInput">
+                Enter a start location for the knight: 
+                <input type="text" id="userStartInput" placeholder="e.g. 0, 0">
+            </div> 
+            <div class="endInput">
+                Enter an end location for the knight: 
+                <input type="text" id="userEndInput" placeholder="e.g. 0, 0">
+            </div>          
+        </div>
     </body>
     <script src="gameBoard.js"></script>
 </html>
