@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     background: rgb(167, 207, 239);
     box-sizing: border-box;
-    /*font-family: 'Poppins', sans-serif; */
 }
 
   button {
-    position: relative;
-    margin: 15px;
-    margin-top: 30px;
     padding: 16px 30px;
     font-size: 1.5 rem;
     font-weight: 100;
@@ -25,22 +21,25 @@
     transition: 0.5s;
     z-index: 1;
   }
+
   
   button:hover {
     color: #fff;
     border: 2px solid rgba(0, 0, 0, 0);
     box-shadow: 0 0 0px var(--color);
   }
+
   
 .board {
+    position: fixed;
     width: 500px;
     height: 500px;
-    margin-left: -400px;
-    margin-top: -200px;
+    margin-left: 35px;
+    margin-top: 100px;
 }
 
 .square {
-    font-family: 'Courier New', Courier, monospace;
+    
     color:blue ;
     float: left;
     width: 58px;
@@ -81,7 +80,8 @@ h1 {
 
 .purples {
     font-palette: --Purples;
-    margin-top: 70px;
+    margin-top: -650px;
+    position: fixed;
   } 
 
 
@@ -95,21 +95,58 @@ img {
 }
 
 .startInput {
-  margin-left: 600px;
-  margin-top: 100px;
+  position: fixed;
+  font-family: 'Poppins';
+  color: white;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  margin-left: -580px;
+  margin-top: -20px;
   width: 275px;
   font-size: 20px;
   font-weight: 900;
-  font-family: 'Courier New', Courier, monospace;
 }
 
+.startInput>input {
+  border: 3px solid rgb(180, 180, 290);
+}
+
+.startInput>input:hover {
+  color: #fff;
+  border: 2px solid white;
+}
+
+#startBtn {
+  position: fixed;
+  margin-left: -525px;
+  margin-top: 250px;
+}
+
+#clearBtn {
+  position: absolute;
+  margin-left: -340px;
+  margin-top: 500px;
+}
+
+
 .endInput {
-  margin-left: 600px;
+  position: fixed;
+  font-family: 'Poppins';
+  color: #fff;
+  margin-left: -580px;
   margin-top: 100px;
   width: 275px;
   font-size: 20px;
   font-weight: 900;
-  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.endInput>input {
+  border: 3px solid rgb(180, 180, 290);
+}
+
+.endInput>input:hover {
+  color: #fff;
+  border: 2px solid white;
 }
 
 #userInput {
@@ -118,3 +155,29 @@ img {
   font-size: 20px;
 }
 
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+#message {
+  position: fixed;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  inline-size: 180px;
+  overflow-wrap: break-word ;
+  margin-left: 780px;
+  margin-top: -200px;
+  font-size: 20px;
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 900;
+}
+
+#displayPath{
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  margin-left: 780px;
+  margin-top: 50px;
+  font-size: 20px;
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 900;
+} 

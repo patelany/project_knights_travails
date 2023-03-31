@@ -1,8 +1,12 @@
 const startGameBtn = document.getElementById('startBtn');
+const clearGameBtn = document.getElementById('clearBtn');
 const userStartInput = document.getElementById('userStartInput');
 const userEndInput = document.getElementById('userEndInput');
+const message = document.getElementById('message');
+const displayPath = document.getElementById('displayPath');
 
 startGameBtn.addEventListener("click", startGame);
+clearGameBtn.addEventListener("click", restart);
 
 function startGame() {
     let startLocation = []; 
@@ -22,7 +26,7 @@ function startGame() {
     squareNodes.forEach((squareNode) => {
         if (startLocation.toString() === squareNode.dataset.coordArray) {
             let knight = document.createElement('img');
-            knight.src = './knight.PNG';
+            knight.src = './knight2.PNG';
             squareNode.appendChild(knight);
 
         }
@@ -121,9 +125,11 @@ function getKnightShortestPath(startLocation, endLocation) {
             // Set the shortest length to the length of the current path minus one (to exclude the starting node)
             const shortestLength = path.length - 1;
             // Log the shortest path and its length to the console
-            console.log("You have made it in " + shortestLength + " moves! Here's your path: ");
+            message.innerHTML = `You have made it in ${shortestLength} moves! Here's your path:`;
             for(node of shortestPath) {
-                console.log([node.row, node.col]);
+                const nodeElement = document.createElement('div');
+                nodeElement.textContent = `[${node.row}, ${node.col}]`;
+                displayPath.appendChild(nodeElement);
             }
             // Return the shortest path and its length as an array
             return [shortestPath, shortestLength];
@@ -150,5 +156,9 @@ function getKnightShortestPath(startLocation, endLocation) {
     }
     // Return null if no path is found
     return null;
+}
+
+function restart() {
+    location.reload();
 }
 
